@@ -1,0 +1,8 @@
+# Enviropment
+.env
+
+# Node Mod.
+/node_modules
+
+# Tests
+/test
