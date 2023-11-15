@@ -7,7 +7,7 @@ export const createBookHandler = async (req, res) => {
 
     res.status(201).json({
       message: 'The book has been successfully registered...!!!',
-      data: result[0]
+      data: book
     });
 
     return result;
