@@ -1,17 +1,6 @@
 import * as bookGET from '../controllers/getBooksController.js';
 
 export const getAllBooksHandler = async (req, res) => {
-  //   await bookGET
-  //     .getAllBooks()
-  //     .then((result) => {
-  //       res.status(200).json({
-  //         message: 'Books retrieved successfully...!!!',
-  //         data: result[0]
-  //       });
-  //     })
-  //     .catch((err) => {
-  //       res.status(500).send(err);
-  //     });
   try {
     const result = await bookGET.getAllBooks();
 
