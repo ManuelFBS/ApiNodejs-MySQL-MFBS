@@ -6,9 +6,11 @@ export const deleteBookHandler = async (req, res) => {
   try {
     const result = await deleteBook(id);
     res.status(200).json(result);
+
+    return result;
   } catch (error) {
     res.status(500).json({
-      error: 'Error when trying to delete the workbook...!!!'
+      error: error.message || 'Error when trying to delete the workbook...!!!'
     });
   }
 };

@@ -5,7 +5,7 @@ import {
 } from '../../handlers/getBooksHandler.js';
 import { createBookHandler } from '../../handlers/postBooksHandler.js';
 import { updateBookHandler } from '../../handlers/putBooksHandler.js';
-// import { deleteBookHandler } from '../../handlers/deleteBooksHandler.js'
+import { deleteBookHandler } from '../../handlers/deleteBooksHandler.js';
 
 export const bookRoutes = Router();
 
@@ -17,4 +17,4 @@ bookRoutes.post('/create', createBookHandler);
 
 bookRoutes.patch('/update/:id', updateBookHandler);
 
-// bookRoutes.delete('/del/:id', deleteBookHandler);
+bookRoutes.delete('/del/:id', deleteBookHandler);
