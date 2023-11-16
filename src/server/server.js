@@ -2,6 +2,7 @@ import express from 'express';
 import morgan from 'morgan';
 import db from './config/db.js';
 import { routes } from './routes/index.route.js';
+import cors from 'cors';
 
 const app = express();
 
@@ -9,8 +10,10 @@ const app = express();
 la configuración de la aplicación Express. */
 app.set('port', process.env.PORT1 || 7000);
 
+// Middlewares ---------------------------------------------------------------------------------------
 app.use(express.json());
 app.use(morgan('dev'));
+app.use(cors());
 
 app.use('/', routes);
 app.use('*', (req, res) => {
