@@ -5,6 +5,7 @@ export const updateBookHandler = async (req, res) => {
   const updatedFieldsBook = req.body;
   try {
     const result = await updateBook(id, updatedFieldsBook);
+    console.log(result);
 
     res.status(200).json({
       messsage: 'The book has been updated...!!!',
