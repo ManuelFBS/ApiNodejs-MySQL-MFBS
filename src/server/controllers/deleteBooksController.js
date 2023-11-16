@@ -3,9 +3,9 @@ import db from '../config/db.js';
 export const deleteBook = async (id) => {
   try {
     const queryDelete = 'DELETE FROM books WHERE id = ?';
-    const deletedBook = await db.execute(queryDelete, [id]);
+    const result = await db.execute(queryDelete, [id]);
 
-    if (deletedBook.affectedRows > 0) {
+    if (result.affectedRows > 0) {
       return { message: 'The book was successfully removed...' };
     } else {
       // Si no hay filas 'afectadas', eso quiere decir que no se
