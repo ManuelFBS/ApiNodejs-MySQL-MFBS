@@ -1,4 +1,4 @@
-import { updateBook } from '../controllers/putBooksController';
+import { updateBook } from '../controllers/putBooksController.js';
 
 export const updateBookHandler = async (req, res) => {
   const { id } = req.params;
